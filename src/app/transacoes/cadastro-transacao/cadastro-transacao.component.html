@@ -1,0 +1,15 @@
+<form>
+    <div class="form-row">
+        <div class=col>
+            <input type="text" [(ngModel)]="transacaoService.nome" name="nome"
+                class="form-control" id="nome" aria-describedby="Nome da transacao" placeholder="Nome da transação">
+        </div>
+        <div class=col>
+            <input type="text" [(ngModel)]="transacaoService.referencialTransacao" name="referencialTransacao"
+                class="form-control" id="referencialTransacao" aria-describedby="Referencial da transacao" placeholder="Referencial da transação">
+        </div>
+        <button type="submit" class="btn btn-success" (click)="transacaoService.setTransacao(transacaoService.nome,transacaoService.referencialTransacao)" >Salvar</button>
+    </div>
+</form> 
+
+<app-consulta-transacao></app-consulta-transacao>

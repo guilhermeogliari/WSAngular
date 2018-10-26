@@ -1,0 +1,23 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Referêncial Transação</th>
+      <th scope="col">Opções</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">0</th>
+      <td>{{transacaoService.nome}}</td>
+      <td>{{transacaoService.referencialTransacao}}</td>
+    </tr>
+    <tr *ngFor="let transacao of transacoes; let i = index">
+      <th scope="row">{{i+1}}</th>
+      <td>{{transacao.nome}}</td>
+      <td>{{transacao.referencialTransacao}}</td>
+      <td>x ou edit</td>
+    </tr>
+  </tbody>
+</table>
