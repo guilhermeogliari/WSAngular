@@ -21,7 +21,7 @@
         <button class="btn btn-danger" (click)="transacaoService.deleteTransacao(i)">X</button>
       </td>
       <td>
-          <button class="btn btn-warning" (click)="">Editar</button>
+          <button class="btn btn-warning" (click)="transacaoService.nome=transacao.nome;transacaoService.referencialTransacao=transacao.referencialTransacao;transacaoService.index=i">Editar</button>
       </td>
     </tr>
   </tbody>

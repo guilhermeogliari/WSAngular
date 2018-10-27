@@ -30,11 +30,19 @@ export class TransacoesService {
     return this.transacao;
   }
 
-  addTransacao(nome: string, referencial: string) {
-    this.transacao.push({
-      "nome": nome,
-      "referencialTransacao": referencial
-    });
+  addTransacao(nome: string, referencial: string, index: any) {
+    if(index == null){
+      this.transacao.push({
+        "nome": nome,
+        "referencialTransacao": referencial
+      });
+    }else{
+      this.transacao[index] = {
+        "nome": nome,
+        "referencialTransacao": referencial
+      };
+    }
+    
   }
 
   deleteTransacao(index){
