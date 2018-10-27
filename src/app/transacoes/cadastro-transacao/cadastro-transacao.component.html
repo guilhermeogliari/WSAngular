@@ -8,7 +8,7 @@
             <input type="text" [(ngModel)]="transacaoService.referencialTransacao" name="referencialTransacao"
                 class="form-control" id="referencialTransacao" aria-describedby="Referencial da transacao" placeholder="Referencial da transação">
         </div>
-        <button type="submit" class="btn btn-success" (click)="transacaoService.addTransacao(transacaoService.nome,transacaoService.referencialTransacao,transacaoService.index);transacaoService.nome='';transacaoService.referencialTransacao=''" >Salvar</button>
+        <button type="submit" class="btn btn-success" (click)="transacaoService.addTransacao(transacaoService.nome,transacaoService.referencialTransacao,transacaoService.index);transacaoService.nome='';transacaoService.referencialTransacao='';transacaoService.index=null" >Salvar</button>
     </div>
 </form> 
 
