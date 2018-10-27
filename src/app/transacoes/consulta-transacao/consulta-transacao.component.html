@@ -4,7 +4,7 @@
       <th scope="col">#</th>
       <th scope="col">Nome</th>
       <th scope="col">Referêncial Transação</th>
-      <th scope="col">Opções</th>
+      <th colspan="2" scope="col">Opções</th>
     </tr>
   </thead>
   <tbody>
@@ -17,7 +17,12 @@
       <th scope="row">{{i+1}}</th>
       <td>{{transacao.nome}}</td>
       <td>{{transacao.referencialTransacao}}</td>
-      <td>x ou edit</td>
+      <td>
+        <button class="btn btn-danger" (click)="transacaoService.deleteTransacao(i)">X</button>
+      </td>
+      <td>
+          <button class="btn btn-warning" (click)="">Editar</button>
+      </td>
     </tr>
   </tbody>
 </table>

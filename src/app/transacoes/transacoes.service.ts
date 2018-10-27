@@ -30,7 +30,7 @@ export class TransacoesService {
     return this.transacao;
   }
 
-  setTransacao(nome: string, referencial: string) {
+  addTransacao(nome: string, referencial: string) {
     this.transacao.push({
       "nome": nome,
       "referencialTransacao": referencial
@@ -38,7 +38,7 @@ export class TransacoesService {
   }
 
   deleteTransacao(index){
-    this.transacao.splice(index);
+    this.transacao.splice(index,1);
   }
 
 }
